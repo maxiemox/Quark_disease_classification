@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuantumX - Pitch Deck: Hybrid Quantum ML for Early Alzheimer's Detection</title>
+  <title>QuantumX - 7-Slide Pitch Deck: Hybrid Quantum ML for Early Alzheimer's Detection</title>
   <style>
     :root {
       --bg-body: #f8fafc;
@@ -96,7 +96,6 @@
       border: 1px solid #bfdbfe;
       color: var(--primary-blue);
       font-weight: 600;
-      letter-spacing: 0.3px;
     }
     .controls {
       display: flex;
@@ -127,7 +126,7 @@
     .progress-bar {
       height: 100%;
       background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal));
-      width: 10%;
+      width: 14.3%;
       transition: width 0.3s ease;
     }
 
@@ -169,7 +168,7 @@
 
     /* Typography */
     .slide-header {
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
     .slide-tag {
       display: inline-block;
@@ -262,7 +261,7 @@
     .pill-purple { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
     .pill-green { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
 
-    /* Code / Formula Box */
+    /* Formula Box */
     .formula-box {
       background: #ffffff;
       border: 1px solid #cbd5e1;
@@ -276,7 +275,7 @@
       line-height: 1.45;
     }
 
-    /* Clean Light Table */
+    /* Table */
     table.bench-table {
       width: 100%;
       border-collapse: collapse;
@@ -290,12 +289,12 @@
       background: #f1f5f9;
       color: var(--primary-navy);
       text-align: left;
-      padding: 12px 14px;
+      padding: 10px 14px;
       font-weight: 700;
       border-bottom: 2px solid #cbd5e1;
     }
     table.bench-table td {
-      padding: 11px 14px;
+      padding: 9px 14px;
       border-bottom: 1px solid #f1f5f9;
       color: #334155;
     }
@@ -311,8 +310,8 @@
     .flow-steps {
       display: flex;
       justify-content: space-between;
-      gap: 12px;
-      margin: 16px 0;
+      gap: 10px;
+      margin: 14px 0;
     }
     .step-node {
       flex: 1;
@@ -320,7 +319,7 @@
       border: 1px solid #cbd5e1;
       border-top: 3px solid var(--primary-blue);
       border-radius: 8px;
-      padding: 12px;
+      padding: 10px 8px;
       text-align: center;
     }
     .step-num {
@@ -330,16 +329,16 @@
       text-transform: uppercase;
     }
     .step-name {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: var(--primary-navy);
       margin-top: 4px;
     }
     .step-desc {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
       margin-top: 4px;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
     /* Footer */
@@ -356,11 +355,11 @@
     }
     .dots-container {
       display: flex;
-      gap: 6px;
+      gap: 8px;
     }
     .dot {
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background: #cbd5e1;
       cursor: pointer;
@@ -368,8 +367,8 @@
     }
     .dot.active {
       background: var(--primary-blue);
-      width: 24px;
-      border-radius: 4px;
+      width: 26px;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -382,12 +381,12 @@
   <header>
     <div class="logo">
       <span class="logo-badge">⚛️ QuantumX</span>
-      <span style="font-size: 0.95rem; font-weight: 600; color: #475569;">Project Presentation</span>
+      <span style="font-size: 0.95rem; font-weight: 600; color: #475569;">Pitch Deck</span>
     </div>
     <div class="track-badge">Challenge 02 · Healthcare · UN SDG-3</div>
     <div class="controls">
       <button class="btn-nav" id="prevBtn" onclick="changeSlide(-1)">◀ Prev</button>
-      <span id="slideCounter" style="font-size: 0.9rem; font-weight: 700; min-width: 55px; text-align: center; color: var(--primary-navy);">1 / 10</span>
+      <span id="slideCounter" style="font-size: 0.9rem; font-weight: 700; min-width: 55px; text-align: center; color: var(--primary-navy);">1 / 7</span>
       <button class="btn-nav" id="nextBtn" onclick="changeSlide(1)">Next ▶</button>
       <button class="btn-nav" onclick="toggleFullScreen()">⛶ Fullscreen</button>
     </div>
@@ -401,12 +400,12 @@
   <!-- Viewport -->
   <main class="deck-viewport">
 
-    <!-- SLIDE 1: Title -->
+    <!-- SLIDE 1: Title & Overview -->
     <div class="slide active" id="slide-0">
       <div class="slide-header">
-        <span class="slide-tag">Executive Summary</span>
+        <span class="slide-tag">Slide 1 · Executive Title</span>
         <h1 class="slide-title">QuantumX: Hybrid Quantum Machine Learning for Early Alzheimer's Detection</h1>
-        <p class="slide-subtitle">Catching neurodegeneration in the 10–15 year pre-symptomatic window with explainable quantum intelligence</p>
+        <p class="slide-subtitle">Detecting neurodegeneration in the 10–15 year pre-symptomatic window with explainable quantum intelligence</p>
       </div>
       <div class="grid-2">
         <div class="card blue-card" style="justify-content: center;">
@@ -415,17 +414,17 @@
             Over <strong>55 million people worldwide</strong> live with dementia. The tragic reality is that by the time severe symptoms appear, up to <strong>40% of memory neurons are already lost</strong>.
           </p>
           <p style="font-size: 0.98rem;">
-            <strong>QuantumX</strong> is a practical, working healthcare solution that combines <strong>Variational Quantum Classifiers (VQC)</strong> and <strong>Quantum SVM (QSVM)</strong> with an innovative <strong>QuantumXAI Explainability Engine</strong> to provide early, accurate, and biologically interpretable diagnoses.
+            <strong>QuantumX</strong> is a working hybrid quantum-classical software platform combining <strong>Variational Quantum Classifiers (VQC)</strong> and <strong>Quantum SVM (QSVM)</strong> with an innovative <strong>QuantumXAI Explainability Engine</strong> to provide early, accurate, and clinically interpretable diagnoses.
           </p>
         </div>
         <div class="card" style="justify-content: center;">
           <h3 class="card-title">📋 Key Project Highlights</h3>
           <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div><span class="pill pill-blue">DATASET</span> OASIS-1 Brain MRI cohort (39 patients, authorized)</div>
+            <div><span class="pill pill-blue">DATASET</span> OASIS-1 Brain MRI clinical cohort (39 patients, authorized)</div>
             <div><span class="pill pill-teal">QUANTUM ENGINES</span> PennyLane 0.45 & Qiskit 2.6.1 Statevector simulation</div>
             <div><span class="pill pill-green">PERFORMANCE</span> 84.6% 5-Fold Stratified CV (36 variational parameters)</div>
             <div><span class="pill pill-purple">INNOVATION</span> QuantumXAI: Feature Attribution & Entanglement Entropy</div>
-            <div><span class="pill pill-blue">USER INTERFACE</span> Interactive 6-tab Streamlit dashboard on localhost</div>
+            <div><span class="pill pill-blue">GLOBAL IMPACT</span> Aligned with UN Sustainable Development Goal 3 (SDG-3)</div>
           </div>
         </div>
       </div>
@@ -434,14 +433,14 @@
     <!-- SLIDE 2: The Problem -->
     <div class="slide" id="slide-1">
       <div class="slide-header">
-        <span class="slide-tag">Problem Statement</span>
+        <span class="slide-tag">Slide 2 · Problem Statement</span>
         <h2 class="slide-title">The Diagnostic Dilemma in Early Alzheimer's</h2>
         <p class="slide-subtitle">Why traditional clinical testing and classical machine learning struggle</p>
       </div>
       <div class="grid-3">
         <div class="card">
           <h3 class="card-title">⏳ 10–15 Year Latency</h3>
-          <p>Brain damage begins more than a decade before noticeable memory loss.</p>
+          <p>Brain tissue loss begins more than a decade before noticeable memory failure.</p>
           <ul>
             <li>Subtle brain atrophy (nWBV) and slight cognitive drops (MMSE) happen quietly.</li>
             <li>No single clinical measurement tells the full story on its own.</li>
@@ -451,7 +450,7 @@
           <h3 class="card-title">📉 Small Clinical Cohorts</h3>
           <p>Medical data is inherently limited and expensive to acquire:</p>
           <ul>
-            <li>Classical deep neural networks easily overfit on small patient samples.</li>
+            <li>Classical deep neural networks easily overfit on small patient cohorts.</li>
             <li>Linear models fail to capture non-linear interactions across age and brain volume.</li>
           </ul>
         </div>
@@ -459,70 +458,18 @@
           <h3 class="card-title">🚫 The "Black Box" Barrier</h3>
           <p>Doctors cannot act on opaque AI predictions:</p>
           <ul>
-            <li>Prescribing aggressive preventive medication requires biological evidence.</li>
+            <li>Prescribing preventive interventions requires biological evidence.</li>
             <li>Physicians need to know <em>why</em> a model flagged a patient as high-risk.</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- SLIDE 3: What We Built -->
+    <!-- SLIDE 3: What We Built & Pipeline -->
     <div class="slide" id="slide-2">
       <div class="slide-header">
-        <span class="slide-tag">The Solution</span>
-        <h2 class="slide-title">What We Built: The QuantumX Platform</h2>
-        <p class="slide-subtitle">A fully implemented, validated, and reproducible software pipeline</p>
-      </div>
-      <div class="grid-2">
-        <div class="card">
-          <h3 class="card-title">⚛️ Dual Quantum Classification Engines</h3>
-          <ul>
-            <li><strong>Hybrid Variational Quantum Classifier (VQC):</strong> 4 qubits, 3 layers, and 36 variational parameters trained using exact hardware-compatible gradients (Parameter-Shift Rule).</li>
-            <li><strong>Quantum Support Vector Machine (QSVM):</strong> Non-linear IQP ZZ feature map computing quantum state fidelity overlap between patient pairs.</li>
-            <li><strong>Dual Framework Support:</strong> Fully implemented in PennyLane for optimization and Qiskit 2.6 for IBM Quantum hardware readiness.</li>
-          </ul>
-        </div>
-        <div class="card highlight-card">
-          <h3 class="card-title" style="color: var(--accent-teal);">🔍 The QuantumXAI Explainability Suite</h3>
-          <ul>
-            <li><strong>Quantum Feature Attribution (QFA):</strong> Measures individual biomarker impact per patient (e.g., proving whether MMSE or brain volume drove the risk).</li>
-            <li><strong>Von Neumann Entanglement Entropy:</strong> Mathematically verifies that quantum entanglement actively connected the patient's multi-modal biomarkers.</li>
-            <li><strong>Interactive Streamlit UI:</strong> A clean dashboard allowing doctors to test patient samples or simulate custom biomarker changes in real time.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 4: Why These Components -->
-    <div class="slide" id="slide-3">
-      <div class="slide-header">
-        <span class="slide-tag">Architecture Choices</span>
-        <h2 class="slide-title">Why We Chose Each Component</h2>
-        <p class="slide-subtitle">Clear technical rationale behind our quantum design decisions</p>
-      </div>
-      <div class="grid-2">
-        <div class="card">
-          <h3 class="card-title">💡 Encoding & Qubit Count</h3>
-          <ul>
-            <li><strong>Why 4 Qubits?</strong> Maps 4 core clinical biomarkers (MMSE, nWBV, eTIV, Age) into a 2⁴ = 16-dimensional quantum state. Keeps circuit depth shallow to minimize noise on NISQ hardware.</li>
-            <li><strong>Why R_Y Angle Encoding?</strong> Requires depth O(1) with zero multi-qubit entangling gates for state loading, avoiding the exponential CNOT gate overhead of Amplitude Encoding.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3 class="card-title">⚡ Circuit Design & Training</h3>
-          <ul>
-            <li><strong>Why Strongly Entangling Layers?</strong> Universal 3-axis single-qubit rotations (R_Z R_Y R_Z) paired with circular CNOT ladders provide high expressivity without barren plateau issues.</li>
-            <li><strong>Why the Parameter-Shift Rule?</strong> Finite-difference gradients fail on real quantum hardware due to shot noise. The Parameter-Shift rule evaluates exact mathematical gradients directly on quantum chips.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 5: How It Works -->
-    <div class="slide" id="slide-4">
-      <div class="slide-header">
-        <span class="slide-tag">System Pipeline</span>
-        <h2 class="slide-title">How It Works: End-to-End Pipeline</h2>
+        <span class="slide-tag">Slide 3 · System Architecture</span>
+        <h2 class="slide-title">What We Built: The 5-Step Diagnostic Pipeline</h2>
         <p class="slide-subtitle">From raw clinical measurements to an explainable quantum diagnosis</p>
       </div>
 
@@ -530,47 +477,76 @@
         <div class="step-node">
           <div class="step-num">Step 1</div>
           <div class="step-name">Patient Data</div>
-          <div class="step-desc">OASIS-1 MRI cohort: MMSE, nWBV, eTIV, Age, Education</div>
+          <div class="step-desc">OASIS-1 MRI: MMSE, nWBV, eTIV, Age, Education</div>
         </div>
         <div class="step-node">
           <div class="step-num">Step 2</div>
-          <div class="step-name">Imputation</div>
-          <div class="step-desc">Protocol-compliant filling & MinMax scaling to [0, π]</div>
+          <div class="step-name">Clinical Imputation</div>
+          <div class="step-desc">Standard fill & MinMax scaling to [0, π]</div>
         </div>
         <div class="step-node">
           <div class="step-num">Step 3</div>
-          <div class="step-name">Quantum State</div>
-          <div class="step-desc">Angle encoding R_Y(x) maps data to 16D Hilbert space</div>
+          <div class="step-name">Angle Encoding</div>
+          <div class="step-desc">R_Y(x_i) maps 4 features into 16D Hilbert space</div>
         </div>
         <div class="step-node">
           <div class="step-num">Step 4</div>
-          <div class="step-name">Quantum Circuit</div>
-          <div class="step-desc">3-Layer Strongly Entangling VQC / IQP ZZ Kernel</div>
+          <div class="step-name">Quantum Core</div>
+          <div class="step-desc">3-Layer Strongly Entangling VQC & IQP ZZ QSVM</div>
         </div>
         <div class="step-node">
           <div class="step-num">Step 5</div>
-          <div class="step-name">Decision</div>
-          <div class="step-desc">Calibrated threshold mapping to clinical risk level</div>
-        </div>
-        <div class="step-node">
-          <div class="step-num">Step 6</div>
           <div class="step-name">QuantumXAI</div>
-          <div class="step-desc">Biomarker attribution & Entanglement Entropy report</div>
+          <div class="step-desc">Feature attribution & Entanglement Entropy report</div>
         </div>
       </div>
 
-      <div class="card" style="margin-top: 10px;">
-        <h3 class="card-title">🎯 Calibrated Decision Boundary</h3>
-        <p>
-          The quantum circuit outputs Pauli-Z expectation value ⟨Z₀⟩ ∈ [-1, 1], which is passed through a calibrated sigmoid with an optimal decision threshold <strong>τ*</strong>. This ensures high sensitivity to early dementia without generating false alarms on healthy elderly patients.
-        </p>
+      <div class="grid-2" style="margin-top: 10px;">
+        <div class="card blue-card">
+          <h3 class="card-title">⚙️ Dual Quantum Classifier Suite</h3>
+          <p>
+            Combines a <strong>36-parameter Variational Quantum Classifier (VQC)</strong> trained via the exact Parameter-Shift Rule with a <strong>Quantum SVM (QSVM)</strong> calculating a fidelity kernel matrix.
+          </p>
+        </div>
+        <div class="card highlight-card">
+          <h3 class="card-title" style="color: var(--accent-teal);">🎯 Calibrated Clinical Decisions</h3>
+          <p>
+            Expectation value ⟨Z₀⟩ ∈ [-1, 1] is mapped to a calibrated probability with an optimal threshold <strong>τ*</strong>, balancing sensitivity for early cases without false alarms on healthy elderly.
+          </p>
+        </div>
       </div>
     </div>
 
-    <!-- SLIDE 6: The Quantum Engine -->
-    <div class="slide" id="slide-5">
+    <!-- SLIDE 4: Why These Components -->
+    <div class="slide" id="slide-3">
       <div class="slide-header">
-        <span class="slide-tag">Quantum Core</span>
+        <span class="slide-tag">Slide 4 · Design Rationale</span>
+        <h2 class="slide-title">Why We Chose Each Component</h2>
+        <p class="slide-subtitle">Clear technical justification behind our quantum architectural decisions</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">💡 Encoding & Qubit Count</h3>
+          <ul>
+            <li><strong>Why 4 Qubits?</strong> Maps 4 core clinical biomarkers (MMSE, nWBV, eTIV, Age) into a 2⁴ = 16-dimensional Hilbert space. Keeps circuit depth shallow (depth 3) to prevent barren plateaus on NISQ hardware.</li>
+            <li><strong>Why R_Y Angle Encoding?</strong> Requires depth O(1) with zero multi-qubit entangling gates for state loading, avoiding the exponential CNOT gate overhead of Amplitude Encoding.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="card-title">⚡ Circuit Design & Training</h3>
+          <ul>
+            <li><strong>Why Strongly Entangling Layers?</strong> Universal 3-axis single-qubit rotations (R_Z R_Y R_Z) with circular CNOT ladders provide high expressivity to capture subtle cross-biomarker correlations.</li>
+            <li><strong>Why the Parameter-Shift Rule?</strong> Finite differences fail under quantum shot noise. The Parameter-Shift rule evaluates exact mathematical gradients directly on quantum processors.</li>
+            <li><strong>Why IQP ZZ Feature Map?</strong> Generates non-linear cross-interactions (π - x_i)(π - x_j) that are classically hard to simulate at scale, producing a rich quantum kernel.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: The Quantum Engines -->
+    <div class="slide" id="slide-4">
+      <div class="slide-header">
+        <span class="slide-tag">Slide 5 · Quantum Core</span>
         <h2 class="slide-title">The Quantum Engine: Plain & Mathematical</h2>
         <p class="slide-subtitle">How quantum mechanics processes multi-biomarker relationships</p>
       </div>
@@ -585,7 +561,7 @@ Readout: ŷ = ⟨ψ(x)| Z₀ |ψ(x)⟩ ∈ [-1, 1]</div>
         </div>
         <div class="card">
           <h3 class="card-title">🌐 QSVM (Quantum Support Vector Machine)</h3>
-          <p><strong>What it does:</strong> Maps patient data into high-dimensional Hilbert space using an IQP ZZ feature map and measures quantum state overlap.</p>
+          <p><strong>What it does:</strong> Maps patient data into Hilbert space using an IQP ZZ feature map and measures quantum state overlap fidelity.</p>
           <div class="formula-box">Kernel Matrix: K(x_i, x_j) = |⟨Φ(x_i)|Φ(x_j)⟩|²
 Captures non-linear cross-feature interactions</div>
           <p><strong>Qiskit 2.6 Native Circuit:</strong></p>
@@ -595,17 +571,17 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
       </div>
     </div>
 
-    <!-- SLIDE 7: QuantumXAI -->
-    <div class="slide" id="slide-6">
+    <!-- SLIDE 6: QuantumXAI -->
+    <div class="slide" id="slide-5">
       <div class="slide-header">
-        <span class="slide-tag">Explainable AI</span>
+        <span class="slide-tag">Slide 6 · Explainable AI</span>
         <h2 class="slide-title">QuantumXAI: Why Doctors Can Trust It</h2>
         <p class="slide-subtitle">Transforming quantum operations into transparent clinical insights</p>
       </div>
       <div class="grid-3">
         <div class="card">
           <h3 class="card-title">🔍 1. Feature Attribution</h3>
-          <p><strong>Which biomarker drove the diagnosis?</strong></p>
+          <p><strong>Which biomarker drove the risk?</strong></p>
           <p>Uses in-circuit angle perturbation (Δ⟨Z₀⟩ / Δx_i) to quantify how much each factor contributed to the risk score.</p>
           <p style="margin-top: 10px; color: var(--primary-blue); font-weight: 700;">Example: Shows that cognitive drop (MMSE) contributed 55% while brain atrophy (nWBV) contributed 35%.</p>
         </div>
@@ -624,14 +600,14 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
       </div>
     </div>
 
-    <!-- SLIDE 8: Results & Benchmarks -->
-    <div class="slide" id="slide-7">
+    <!-- SLIDE 7: Results & Impact -->
+    <div class="slide" id="slide-6">
       <div class="slide-header">
-        <span class="slide-tag">Validation & Benchmarks</span>
-        <h2 class="slide-title">Results: 5-Fold Stratified Cross-Validation</h2>
-        <p class="slide-subtitle">Rigorous, honest benchmark against classical machine learning models</p>
+        <span class="slide-tag">Slide 7 · Results & Impact</span>
+        <h2 class="slide-title">Validation Benchmarks & Healthcare Impact</h2>
+        <p class="slide-subtitle">5-Fold Stratified Cross-Validation on OASIS-1 MRI Cohort</p>
       </div>
-      <div class="card" style="margin-bottom: 12px; padding: 14px;">
+      <div class="card" style="margin-bottom: 12px; padding: 12px;">
         <table class="bench-table">
           <thead>
             <tr>
@@ -639,7 +615,6 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
               <th>Architecture Type</th>
               <th>Accuracy (5-Fold CV)</th>
               <th>ROC-AUC</th>
-              <th>F1-Score</th>
               <th>Parameter Count</th>
             </tr>
           </thead>
@@ -649,7 +624,6 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
               <td>Hybrid QML (3-Layer Ansatz)</td>
               <td>0.846 ± 0.08</td>
               <td>0.88</td>
-              <td>0.81</td>
               <td>36 variational params</td>
             </tr>
             <tr class="highlight">
@@ -657,7 +631,6 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
               <td>Quantum Kernel (IQP ZZ)</td>
               <td>0.821 ± 0.09</td>
               <td>0.85</td>
-              <td>0.78</td>
               <td>Precomputed Kernel</td>
             </tr>
             <tr>
@@ -665,7 +638,6 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
               <td>Kernel Support Vector</td>
               <td>0.821 ± 0.09</td>
               <td>0.84</td>
-              <td>0.77</td>
               <td>Support vector weights</td>
             </tr>
             <tr>
@@ -673,7 +645,6 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
               <td>Ensemble (100 Trees)</td>
               <td>0.821 ± 0.10</td>
               <td>0.86</td>
-              <td>0.79</td>
               <td>~1,200 decision nodes</td>
             </tr>
             <tr>
@@ -681,85 +652,27 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
               <td>Linear Model</td>
               <td>0.795 ± 0.08</td>
               <td>0.82</td>
-              <td>0.74</td>
               <td>5 linear weights</td>
-            </tr>
-            <tr>
-              <td>Gradient Boosting</td>
-              <td>Ensemble (100 Trees)</td>
-              <td>0.795 ± 0.11</td>
-              <td>0.83</td>
-              <td>0.75</td>
-              <td>100 sequential trees</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="card highlight-card">
-        <p><strong>💡 Key Takeaway:</strong> We do not make exaggerated claims of quantum supremacy. We prove that a <strong>compact 36-parameter quantum model matches or outperforms complex classical ensembles</strong> on small medical cohorts while offering unique physical explainability.</p>
-      </div>
-    </div>
-
-    <!-- SLIDE 9: Healthcare Use Cases -->
-    <div class="slide" id="slide-8">
-      <div class="slide-header">
-        <span class="slide-tag">Healthcare Impact</span>
-        <h2 class="slide-title">Real-World Healthcare Use Cases</h2>
-        <p class="slide-subtitle">Delivering value for memory clinics, pharmaceutical trials, and telemedicine</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <h3 class="card-title">🏥 Memory Clinics</h3>
-          <p><strong>Routine Health Screening:</strong></p>
-          <p>Deployed in hospital neurology departments. Doctors input standard cognitive scores and MRI volume measurements, receiving an instant risk score with a transparent biomarker report card.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">💊 Clinical Trials (Pharma)</h3>
-          <p><strong>Patient Stratification:</strong></p>
-          <p>Alzheimer's drug trials often fail because patients are enrolled after irreversible brain damage has occurred. QuantumX identifies true early-stage candidates to improve trial success rates.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">🌐 Remote Telemedicine</h3>
-          <p><strong>Cloud Quantum Diagnostics:</strong></p>
-          <p>Community health centers collect patient metrics locally; quantum inference is processed via IBM Quantum cloud backends, democratizing access to specialized neurology screening.</p>
-        </div>
-      </div>
-      <div class="card blue-card" style="margin-top: 12px;">
-        <p><strong>🌍 UN Sustainable Development Goal 3:</strong> Directly advances <strong>SDG 3.4</strong> by reducing premature mortality and burden from non-communicable neurodegenerative disorders through early detection.</p>
-      </div>
-    </div>
-
-    <!-- SLIDE 10: Roadmap & Conclusion -->
-    <div class="slide" id="slide-9">
-      <div class="slide-header">
-        <span class="slide-tag">Future Outlook</span>
-        <h2 class="slide-title">Honest Limitations & Next Steps</h2>
-        <p class="slide-subtitle">Our path from working prototype to clinical practice</p>
-      </div>
       <div class="grid-2">
-        <div class="card">
-          <h3 class="card-title">⚠️ Honest Limitations</h3>
-          <ul>
-            <li><strong>Cohort Scale:</strong> Validated on Disc 1 of OASIS-1 (39 patients); scaling to all 416 subjects requires batch quantum kernel processing.</li>
-            <li><strong>Simulator vs Hardware:</strong> Tested on Statevector simulators. Real quantum chips introduce hardware decoherence and readout errors.</li>
-          </ul>
+        <div class="card blue-card">
+          <h3 class="card-title">🏥 Healthcare Use Cases</h3>
+          <p>
+            <strong>Memory Clinics:</strong> Routine early screening during checkups.<br>
+            <strong>Pharma Clinical Trials:</strong> Stratifies pre-symptomatic MCI candidates before irreversible atrophy occurs.<br>
+            <strong>Telemedicine:</strong> Cloud-based quantum inference via IBM Quantum.
+          </p>
         </div>
-        <div class="card">
-          <h3 class="card-title">🚀 3-Phase Roadmap</h3>
-          <ul>
-            <li><strong>Phase 1 (Immediate):</strong> Deploy on IBM Quantum hardware with Zero-Noise Extrapolation (ZNE) error mitigation via Mitiq.</li>
-            <li><strong>Phase 2 (6 Months):</strong> Implement Quantum Convolutional Neural Networks (QCNN) directly on raw 3D MRI brain slices.</li>
-            <li><strong>Phase 3 (12 Months):</strong> Multi-hospital clinical validation and federated quantum learning.</li>
-          </ul>
+        <div class="card highlight-card">
+          <h3 class="card-title" style="color: var(--accent-teal);">🚀 Summary & Roadmap</h3>
+          <p>
+            Matches or outperforms classical ensembles with only <strong>36 parameters</strong>.<br>
+            <strong>Next:</strong> Error mitigation (ZNE via Mitiq) on physical IBM Quantum QPUs and Quantum Convolutional Nets (QCNN) on 3D MRI voxels.
+          </p>
         </div>
-      </div>
-      <div class="card" style="text-align: center; margin-top: 12px; background: #eff6ff; border-color: var(--primary-blue);">
-        <p style="font-size: 1.12rem; font-weight: 700; color: var(--primary-navy);">
-          "QuantumX proves that Quantum Machine Learning is not an abstract theory—it is a working, explainable, and life-saving reality for healthcare."
-        </p>
-        <p style="font-size: 0.95rem; color: var(--primary-blue); margin-top: 6px; font-weight: 600;">
-          Complete code, tests, and live web demo available at localhost:8502
-        </p>
       </div>
     </div>
 
@@ -773,7 +686,7 @@ Simulated on Qiskit Statevector (⟨Z₀⟩ = 0.2252)</div>
   </footer>
 
   <script>
-    const totalSlides = 10;
+    const totalSlides = 7;
     let currentSlide = 0;
 
     // Create dots

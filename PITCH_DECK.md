@@ -7,24 +7,21 @@
 
 ---
 
-## 📑 Slide Overview
+## 📑 7-Slide Overview
 
 | Slide | Title | Core Focus |
 | :---: | :--- | :--- |
 | **1** | **Executive Title** | Project mission, track, and key takeaways |
 | **2** | **The Problem (Why)** | 10–15 year silent window & classical ML limitations |
-| **3** | **What We Built (What)** | End-to-end working hybrid quantum-classical software pipeline |
-| **4** | **Why These Components? (Why)** | Clear technical rationale for our architecture choices |
-| **5** | **How It Works (How)** | 6-stage pipeline from MRI to explainable diagnosis |
-| **6** | **The Quantum Engines** | Intuitive & mathematical breakdown of VQC and QSVM |
-| **7** | **The Innovation: QuantumXAI** | Explainable AI: Feature attribution, entanglement entropy, and safety |
-| **8** | **Results & Benchmarks** | 5-Fold Stratified CV against 4 classical models |
-| **9** | **Real-World Healthcare Use Cases** | Memory clinics, clinical trial stratification, and telemedicine |
-| **10** | **Limitations & Roadmap** | Honest assessment, next steps, and concluding vision |
+| **3** | **What We Built & The Pipeline (What & How)** | 5-step diagnostic pipeline and dual quantum classifiers |
+| **4** | **Why These Components? (Architectural Choices)** | Technical rationale for 4 qubits, RY encoding, strongly entangling, parameter-shift |
+| **5** | **The Quantum Engines (The Implementation)** | Plain terms & mathematical formulation of VQC and QSVM |
+| **6** | **The Innovation: QuantumXAI** | Feature attribution, entanglement entropy, and model safety |
+| **7** | **Results, Healthcare Impact & Roadmap** | 5-fold CV benchmarks, real-world use cases, and future outlook |
 
 ---
 
-## 📽️ Slide-by-Slide Content
+## 📽️ The 7 Slides
 
 ---
 
@@ -33,11 +30,11 @@
 * **The Mission:** Detecting neurodegeneration in the 10–15 year pre-symptomatic window before irreversible brain atrophy occurs.
 * **Core Value:** Over **55 million people** live with dementia worldwide. By the time symptoms appear, up to **40% of memory neurons are already lost**.
 * **The Solution:** QuantumX combines **Variational Quantum Classifiers (VQC)** and **Quantum SVM (QSVM)** with an innovative **QuantumXAI Explainability Engine** to deliver accurate, biologically interpretable diagnoses.
-* **Quick Stats:**
+* **Key Highlights:**
   - **Dataset:** OASIS-1 Brain MRI clinical cohort (39 patients, authorized).
   - **Frameworks:** PennyLane 0.45 & Qiskit 2.6.1 Statevector simulation.
   - **Cross-Validation Accuracy:** **84.6%** with just 36 parameters.
-  - **Live Web App:** Running interactive Streamlit dashboard at `localhost:8502`.
+  - **Global Impact:** Aligned with UN Sustainable Development Goal 3 (SDG-3).
 
 ---
 
@@ -57,16 +54,17 @@
 
 ---
 
-### Slide 3: What We Built (The "What")
-#### **The QuantumX Software Platform**
-* **Dual Quantum Classification Engines:**
-  * **Hybrid VQC:** 4 qubits, 3 layers, and 36 variational parameters trained using exact hardware-compatible gradients (Parameter-Shift Rule).
-  * **Quantum SVM (QSVM):** Non-linear IQP ZZ feature map calculating an all-to-all quantum fidelity overlap kernel matrix.
-  * **Cross-Platform:** Native implementations in both PennyLane and Qiskit 2.6.1 for IBM Quantum hardware readiness.
-* **The QuantumXAI Innovation:**
-  * **Quantum Feature Attribution (QFA):** In-circuit angle perturbation identifying specific biomarker risk factors per patient.
-  * **Von Neumann Entanglement Entropy:** Mathematical verification that quantum entanglement actively connected multi-modal biomarkers.
-  * **Interactive Interface:** Live 6-tab Streamlit dashboard with real-time custom patient biomarker simulator.
+### Slide 3: What We Built & The Pipeline (What & How)
+#### **The 5-Step Diagnostic Pipeline**
+
+$$\text{OASIS-1 MRI Data} \xrightarrow{\text{Imputation \& Scaling}} \text{4 Qubits } R_Y(x) \xrightarrow{\text{3-Layer Entangling Circuit}} \langle Z_0 \rangle \xrightarrow{\text{Calibrated Decision }\tau^*} \text{QuantumXAI Report}$$
+
+1. **Patient Data Ingestion:** OASIS-1 MRI clinical cohort (39 patients) containing cognitive tests (`MMSE`) and volumetric MRI metrics (`nWBV`, `eTIV`, `Age`).
+2. **Clinical Imputation & Scaling:** Standard protocol fill for young normal controls ($Age < 50, CDR=0, MMSE=30$) and MinMax scaling to $[0, \pi]$.
+3. **Quantum State Encoding:** Single-qubit $R_Y(x_i)$ rotations initialize the 4-qubit quantum state in 16-dimensional Hilbert space.
+4. **Quantum Core:** 3-layer strongly entangling Variational Quantum Classifier (36 parameters) and non-linear IQP ZZ Quantum SVM.
+5. **QuantumXAI Generation:** Computes individual biomarker attributions, Von Neumann Entanglement Entropy, and doctor-friendly report cards.
+* **Calibrated Decisions:** Output expectation $\langle Z_0 \rangle \in [-1, 1]$ is mapped to risk via optimal threshold $\tau^*$, balancing sensitivity and specificity.
 
 ---
 
@@ -84,21 +82,7 @@
 
 ---
 
-### Slide 5: How It Works (The Pipeline)
-#### **End-to-End Diagnostic Flow**
-
-$$\text{OASIS-1 MRI Data} \xrightarrow{\text{Imputation \& Scaling}} \text{4 Qubits } R_Y(x) \xrightarrow{\text{3-Layer Entangling Circuit}} \langle Z_0 \rangle \xrightarrow{\text{Calibrated Decision }\tau^*} \text{QuantumXAI Report}$$
-
-1. **Clinical Data Ingestion:** OASIS-1 MRI clinical cohort (39 patients) containing cognitive tests and volumetric MRI metrics.
-2. **Clinical Imputation & Scaling:** Protocol-compliant filling for young normal controls ($Age < 50, CDR=0, MMSE=30$) and MinMax scaling to $[0, \pi]$.
-3. **Quantum State Encoding:** Single-qubit $R_Y(x_i)$ rotations initialize the 4-qubit quantum state in 16-dimensional Hilbert space.
-4. **Parameterized Circuit:** 3 layers of universal rotations and circular CNOT entanglement evaluate non-linear feature interactions.
-5. **Calibrated Threshold Decision:** Measures Pauli-Z expectation $\langle Z_0 \rangle \in [-1, 1]$, mapped via calibrated sigmoid with optimal threshold $\tau^*$ to balance sensitivity and specificity.
-6. **QuantumXAI Report:** Generates individual biomarker attributions, entanglement entropy verification, and doctor-friendly report cards.
-
----
-
-### Slide 6: The Quantum Engine (Circuits & Formulations)
+### Slide 5: The Quantum Engines (The Implementation)
 #### **Plain Terms with Exact Mathematical Formulations**
 
 * **1. Hybrid VQC Formulation:**
@@ -115,7 +99,7 @@ $$\text{OASIS-1 MRI Data} \xrightarrow{\text{Imputation \& Scaling}} \text{4 Qub
 
 ---
 
-### Slide 7: The Innovation: QuantumXAI
+### Slide 6: The Innovation: QuantumXAI
 #### **Why Neurologists Can Trust QuantumX**
 
 1. **Quantum Feature Attribution (QFA):**
@@ -133,45 +117,21 @@ $$\text{OASIS-1 MRI Data} \xrightarrow{\text{Imputation \& Scaling}} \text{4 Qub
 
 ---
 
-### Slide 8: Results & Classical Baseline Comparison
+### Slide 7: Results, Healthcare Impact & Roadmap
 #### **5-Fold Stratified Cross-Validation on OASIS-1 MRI Cohort**
 
-| Model | Architecture Type | Accuracy (5-Fold CV) | ROC-AUC | F1-Score | Parameter Count |
-| :--- | :--- | :---: | :---: | :---: | :---: |
-| **QuantumX VQC** | **Hybrid QML (3-Layer Ansatz)** | **0.846 ± 0.08** | **0.88** | **0.81** | **36 variational params** |
-| **QuantumX QSVM** | **Quantum Kernel (IQP ZZ)** | **0.821 ± 0.09** | **0.85** | **0.78** | **Precomputed Kernel** |
-| Classical SVM (RBF) | Kernel Support Vector | 0.821 ± 0.09 | 0.84 | 0.77 | Hyperplane weights |
-| Random Forest | Classical Ensemble | 0.821 ± 0.10 | 0.86 | 0.79 | 100 trees (~1,200 nodes) |
-| Logistic Regression | Classical Linear | 0.795 ± 0.08 | 0.82 | 0.74 | 5 linear weights |
-| Gradient Boosting | Classical Ensemble | 0.795 ± 0.11 | 0.83 | 0.75 | 100 sequential trees |
+| Model | Architecture Type | Accuracy (5-Fold CV) | ROC-AUC | Parameter Count |
+| :--- | :--- | :---: | :---: | :---: |
+| **QuantumX VQC** | **Hybrid QML (3-Layer Ansatz)** | **0.846 ± 0.08** | **0.88** | **36 variational params** |
+| **QuantumX QSVM** | **Quantum Kernel (IQP ZZ)** | **0.821 ± 0.09** | **0.85** | **Precomputed Kernel** |
+| Classical SVM (RBF) | Kernel Support Vector | 0.821 ± 0.09 | 0.84 | Hyperplane weights |
+| Random Forest | Classical Ensemble | 0.821 ± 0.10 | 0.86 | 100 trees (~1,200 nodes) |
+| Logistic Regression | Classical Linear | 0.795 ± 0.08 | 0.82 | 5 linear weights |
 
-* **Key Takeaway:**
-  * We do not make exaggerated claims of quantum supremacy. We prove that a **compact 36-parameter quantum model matches or outperforms complex classical ensembles** while offering unique physical explainability.
-
----
-
-### Slide 9: Real-World Healthcare Use Cases
-#### **Three Practical Clinical Applications**
-
-1. **Memory & Geriatric Clinics:**
-   * Assistive screening tool during annual checkups. Clinicians input cognitive and volumetric metrics, instantly receiving quantum risk scores and biomarker attribution graphs.
-2. **Pharmaceutical Drug Trials (MCI Stratification):**
-   * Monoclonal antibody trials (e.g. Lecanemab, Donanemab) fail when patients are enrolled after extensive atrophy has occurred. QuantumX identifies true early-stage Mild Cognitive Impairment candidates.
-3. **Remote Telemedicine via Cloud QPUs:**
-   * Local clinics collect demographic and cognitive test data; quantum inference executes via cloud backends (IBM Quantum), democratizing specialized neurology screening.
-* **UN SDG-3 Alignment:** Directly addresses **SDG 3.4** by reducing premature mortality and burden from non-communicable neurodegenerative disorders through early detection.
-
----
-
-### Slide 10: Limitations, Roadmap & Conclusion
-#### **From Working Prototype to Clinical Production**
-
-* **Honest Limitations:**
-  * **Cohort Scale:** Validated on Disc 1 of OASIS-1 (39 patients); scaling to all 416 subjects requires batch quantum kernel processing.
-  * **Simulator Execution:** Tested on Statevector simulators. Real quantum chips introduce hardware decoherence ($T_1, T_2$) and readout errors.
-* **Three-Phase Roadmap:**
-  * **Phase 1 (Immediate):** Deploy with Zero-Noise Extrapolation (ZNE) error mitigation via Mitiq on IBM Quantum QPUs.
-  * **Phase 2 (6 Months):** Implement Quantum Convolutional Neural Networks (QCNN) directly on raw 3D MRI brain slices.
-  * **Phase 3 (12 Months):** Multi-center clinical validation and federated quantum learning across hospital networks.
-* **Conclusion:**
-  > *"QuantumX demonstrates that Quantum Machine Learning is not an abstract theory—it is a working, explainable, and life-saving reality for healthcare."*
+* **Real-World Healthcare Use Cases:**
+  1. **Memory & Geriatric Clinics:** Routine assistive screening tool during annual checkups.
+  2. **Clinical Trials (Pharma):** Stratifies pre-symptomatic MCI candidates before irreversible atrophy occurs.
+  3. **Telemedicine:** Cloud-based quantum inference via IBM Quantum backends.
+* **Key Takeaway & Roadmap:**
+  - Matches or outperforms classical ensembles with only **36 parameters**.
+  - **Roadmap:** Deploy with Zero-Noise Extrapolation (ZNE via Mitiq) on IBM Quantum QPUs and develop Quantum Convolutional Networks (QCNN) directly on raw 3D MRI brain voxel slices.
